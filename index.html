@@ -4,73 +4,572 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Md Majharul Islam | Engineering Portfolio</title>
+
 <style>
-:root{--paper:#f4efe3;--ink:#12201c;--muted:#5e6862;--green:#335f50;--gold:#b9822e;--line:#cfc5ad;--panel:#efe7d8;--dark:#102019;--white:#fffaf0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);background:radial-gradient(circle at top left,rgba(255,255,255,.75),transparent 28rem),var(--paper);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
-a{text-decoration:none;color:inherit}.container{width:min(1260px,calc(100% - 48px));margin:auto}
-.nav{position:sticky;top:0;z-index:20;background:rgba(244,239,227,.92);backdrop-filter:blur(14px);border-top:4px solid var(--gold);border-bottom:1px solid var(--line)}
-.nav-inner{width:min(1400px,calc(100% - 56px));margin:auto;min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{font-family:Georgia,serif;font-size:25px;font-weight:800}.brand span{color:var(--gold)}
-.nav-links{display:flex;flex-wrap:wrap;gap:30px;color:var(--muted);font-weight:800;font-size:14px;letter-spacing:.9px}
-.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center;padding:78px 0 90px}
-.portrait-wrap{position:relative;border:1px solid var(--line);background:var(--panel);padding:18px;border-radius:8px;box-shadow:0 28px 60px rgba(55,43,25,.12)}
-.portrait{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:4px;background:white}
-.portrait-note{position:absolute;right:28px;bottom:28px;background:rgba(16,32,25,.9);color:var(--white);border-radius:4px;padding:12px 14px;font-size:13px;font-weight:800}
-.eyebrow,.section-num,.date,.project-type,.skill-group h3,.cert-title{color:var(--gold);font-family:"Courier New",monospace;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.7px}
-h1{margin:16px 0 18px;font-size:clamp(58px,8vw,118px);line-height:.92}.hero-title em{color:var(--gold)}
-.lead{max-width:720px;color:#33413c;font-size:21px}.button{display:inline-flex;margin:8px 8px 0 0;padding:12px 18px;border:1px solid var(--ink);border-radius:3px;font-weight:800}.primary{background:var(--ink);color:var(--white)}
-.section{padding:92px 0}.section-title{display:grid;grid-template-columns:auto auto 1fr;align-items:center;gap:22px;margin-bottom:60px}.section-title h2{margin:0;font-size:clamp(42px,5vw,66px)}.rule{height:1px;background:var(--line)}
-.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px}.copy{font-size:21px;color:#38443f}.copy strong{color:var(--ink)}
-.glance,.project-card,.education-card{background:rgba(239,231,216,.75);border:1px solid var(--line);border-radius:7px;padding:34px}
-.glance h3{color:var(--green);font-family:"Courier New",monospace;letter-spacing:4px;text-transform:uppercase}.glance-row{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:16px 0;border-top:1px dashed var(--line)}.glance-value{text-align:right;font-weight:900}
-.timeline{border-top:1px solid var(--line)}.role{display:grid;grid-template-columns:250px 1fr;gap:80px;padding:54px 0;border-bottom:1px solid var(--line)}.place{color:var(--muted);margin-top:12px}.role h3{margin:0;font-size:31px}.company{color:var(--green);font-weight:900;font-size:18px}.role li{margin-bottom:10px}.role li::marker{color:var(--gold)}
-.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}.project-card h3{font-size:29px;margin:0}.project-org,.edu-school{color:var(--green);font-weight:900}.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.pill{border:1px solid var(--line);background:rgba(255,255,255,.32);border-radius:999px;padding:8px 13px}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}.skill-group h3{color:var(--green);border-bottom:1px solid var(--line);padding-bottom:14px}
-.education-card{display:grid;grid-template-columns:1fr 170px;gap:30px;margin-bottom:22px}.edu-date{text-align:right;font-family:"Courier New",monospace;font-weight:800}.edu-date span{display:block;color:var(--muted);font-family:Arial;font-weight:400}
-.contact-panel{background:linear-gradient(135deg,rgba(16,32,25,.97),rgba(26,39,31,.93));color:var(--white);border-radius:8px;padding:72px 40px;text-align:center}.contact-panel h2{font-size:clamp(42px,5vw,70px)}.contact-panel h2 em{color:var(--gold)}.contact-panel p{color:#d8d2c6;font-size:20px}.contact-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}.contact-buttons a{min-width:170px;border:1px solid rgba(255,255,255,.3);padding:16px 18px;font-weight:900}
-footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier New",monospace}
-@media(max-width:900px){.hero,.about-grid,.project-grid,.skills-grid,.role{grid-template-columns:1fr}.nav-inner{flex-direction:column;align-items:flex-start;padding:14px 0}.nav-links{gap:12px}.section-title{grid-template-columns:auto 1fr}.rule{grid-column:1/-1}.glance-row,.education-card{grid-template-columns:1fr}.glance-value,.edu-date{text-align:left}}
+:root{
+  --paper:#f4efe3;
+  --ink:#102019;
+  --muted:#59645f;
+  --green:#335f50;
+  --gold:#bd862f;
+  --line:#cec3aa;
+  --panel:#eee5d5;
+  --dark:#102019;
+  --white:#fffaf0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:radial-gradient(circle at top left,rgba(255,255,255,.85),transparent 34rem),var(--paper);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1240px,calc(100% - 60px));margin:auto}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(244,239,227,.95);
+  border-top:4px solid var(--gold);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  width:min(1460px,calc(100% - 70px));
+  margin:auto;
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-family:Georgia,serif;
+  font-size:28px;
+  font-weight:900;
+}
+.logo span{color:var(--gold)}
+.nav-links{
+  display:flex;
+  gap:34px;
+  font-weight:800;
+  color:var(--muted);
+  letter-spacing:.8px;
+}
+.nav-links a:hover{color:var(--ink)}
+
+.hero{
+  min-height:calc(100vh - 76px);
+  display:grid;
+  grid-template-columns:1.05fr .75fr;
+  gap:54px;
+  align-items:center;
+  padding:74px 0;
+}
+.eyebrow{
+  color:var(--green);
+  font-family:"Courier New",monospace;
+  font-weight:900;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  margin-bottom:26px;
+}
+.eyebrow:before{
+  content:"";
+  display:inline-block;
+  width:48px;
+  height:1px;
+  background:var(--gold);
+  vertical-align:middle;
+  margin-right:16px;
+}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
+h1{
+  margin:0;
+  font-size:clamp(54px,6.5vw,104px);
+  line-height:.94;
+  letter-spacing:-3px;
+}
+h1 em{
+  display:block;
+  color:var(--gold);
+  font-style:italic;
+}
+.hero p{
+  max-width:760px;
+  font-size:22px;
+  color:#2e3834;
+  margin:30px 0 0;
+}
+.hero strong{color:var(--green)}
+.hero-buttons{
+  display:flex;
+  gap:18px;
+  margin-top:38px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:160px;
+  min-height:58px;
+  padding:14px 22px;
+  border:1px solid var(--ink);
+  border-radius:3px;
+  font-weight:900;
+  font-size:16px;
+}
+.btn.dark{background:var(--ink);color:var(--white)}
+
+.photo-card{
+  position:relative;
+  width:min(360px,100%);
+  margin-left:auto;
+  border:1px solid var(--gold);
+  border-radius:6px;
+  padding:12px;
+  background:rgba(239,231,216,.55);
+  box-shadow:22px 24px 0 rgba(51,95,80,.88);
+}
+.photo-card img{
+  display:block;
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:4px;
+  background:white;
+}
+.photo-label{
+  position:absolute;
+  left:30px;
+  bottom:-22px;
+  background:var(--green);
+  color:white;
+  padding:12px 18px;
+  border-radius:4px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.section{padding:90px 0}
+.section-title{
+  display:grid;
+  grid-template-columns:auto auto 1fr;
+  gap:22px;
+  align-items:center;
+  margin-bottom:60px;
+}
+.num{
+  color:var(--gold);
+  font-family:"Courier New",monospace;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.section-title h2{
+  margin:0;
+  font-size:clamp(42px,5vw,64px);
+  letter-spacing:-2px;
+}
+.line{height:1px;background:var(--line)}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:70px;
+}
+.copy{
+  font-size:21px;
+  color:#38443f;
+}
+.copy p{margin:0 0 28px}
+.copy strong{color:var(--ink)}
+
+.glance{
+  background:rgba(239,231,216,.74);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:34px;
+}
+.glance h3{
+  margin:0 0 24px;
+  color:var(--green);
+  font-family:"Courier New",monospace;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+.row{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:20px;
+  padding:18px 0;
+  border-top:1px dashed var(--line);
+}
+.row:first-of-type{border-top:0}
+.row span:first-child{color:var(--muted)}
+.row span:last-child{text-align:right;font-weight:900}
+
+.timeline{border-top:1px solid var(--line)}
+.role{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:80px;
+  padding:54px 0;
+  border-bottom:1px solid var(--line);
+}
+.date{
+  color:var(--gold);
+  font-family:"Courier New",monospace;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.place{color:var(--muted);margin-top:10px}
+.role h3{font-size:32px;margin:0}
+.company{
+  color:var(--green);
+  font-weight:900;
+  font-size:18px;
+  margin:4px 0 18px;
+}
+.role li{
+  font-size:18px;
+  margin-bottom:10px;
+}
+.role li::marker{color:var(--gold)}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+}
+.card{
+  background:rgba(239,231,216,.74);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:34px;
+}
+.type{
+  color:var(--gold);
+  font-family:"Courier New",monospace;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:2.6px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.card h3{
+  font-size:30px;
+  line-height:1.15;
+  margin:0 0 8px;
+}
+.org{
+  color:var(--green);
+  font-weight:900;
+  margin-bottom:18px;
+}
+.card p{
+  font-size:17px;
+  color:#33413c;
+}
+.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+.pill{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.35);
+  border-radius:999px;
+  padding:8px 13px;
+  font-size:15px;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:34px;
+}
+.skill h3{
+  color:var(--green);
+  font-family:"Courier New",monospace;
+  font-size:16px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--line);
+  padding-bottom:14px;
+}
+
+.edu-card{
+  display:grid;
+  grid-template-columns:1fr 170px;
+  align-items:center;
+  gap:30px;
+  background:rgba(239,231,216,.74);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:34px;
+  margin-bottom:22px;
+}
+.edu-card h3{
+  font-size:28px;
+  margin:0 0 6px;
+}
+.school{
+  color:var(--green);
+  font-weight:900;
+}
+.gpa{
+  text-align:right;
+  font-family:"Courier New",monospace;
+  font-weight:900;
+}
+.gpa span{
+  display:block;
+  color:var(--muted);
+  font-family:Arial;
+  font-weight:400;
+  margin-top:6px;
+}
+
+.contact-panel{
+  background:linear-gradient(135deg,rgba(16,32,25,.98),rgba(25,40,31,.95));
+  color:var(--white);
+  border-radius:8px;
+  padding:78px 42px;
+  text-align:center;
+}
+.contact-panel h2{
+  font-size:clamp(44px,5vw,72px);
+  margin:0;
+}
+.contact-panel h2 em{color:var(--gold)}
+.contact-panel p{
+  font-size:20px;
+  color:#d8d2c6;
+  max-width:760px;
+  margin:24px auto 34px;
+}
+.contact-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px;
+}
+.contact-links a{
+  min-width:180px;
+  border:1px solid rgba(255,255,255,.35);
+  padding:16px 18px;
+  font-weight:900;
+}
+
+footer{
+  text-align:center;
+  color:var(--muted);
+  padding:34px;
+  font-family:"Courier New",monospace;
+}
+
+@media(max-width:950px){
+  .hero,.about-grid,.project-grid,.skills-grid,.role{grid-template-columns:1fr}
+  .photo-card{margin:0}
+  .nav-inner{
+    height:auto;
+    align-items:flex-start;
+    flex-direction:column;
+    padding:16px 0;
+  }
+  .nav-links{
+    gap:14px;
+    font-size:13px;
+    flex-wrap:wrap;
+  }
+  .section-title{grid-template-columns:auto 1fr}
+  .line{grid-column:1/-1}
+}
+@media(max-width:650px){
+  .container{width:min(100% - 28px,1320px)}
+  h1{font-size:58px}
+  .hero p,.copy{font-size:18px}
+  .hero-buttons{flex-direction:column}
+  .row,.edu-card{grid-template-columns:1fr}
+  .row span:last-child,.gpa{text-align:left}
+}
 </style>
 </head>
+
 <body>
-<nav class="nav"><div class="nav-inner"><a class="brand" href="#home">MMI<span>.</span></a><div class="nav-links"><a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#contact">CONTACT</a></div></div></nav>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#home">MMI<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </div>
+</nav>
 
 <main id="home">
-<section class="hero container">
-<div class="portrait-wrap"><img class="portrait" src="profile.jpg" alt="Md Majharul Islam"><div class="portrait-note">OPEN TO WORK</div></div>
-<div><div class="eyebrow">Mechanical - Automation - Industrial Systems</div><h1 class="hero-title">Md Majharul <em>Islam.</em></h1><p class="lead">I build practical engineering solutions across mechanical design, automation, manufacturing, quality, reliability, CNC, PLC systems, and data-driven industrial improvement.</p><a class="button primary" href="#projects">View Projects</a><a class="button" href="mailto:islammdmajharul116@gmail.com">Contact Me</a></div>
-</section>
+  <section class="hero container">
+    <div>
+      <div class="eyebrow">Mechanical Engineer - Beaumont, TX</div>
+      <h1>Md Majharul <em>Islam.</em></h1>
+      <p>
+        Mechanical, automation, and industrial systems engineer focused on
+        <strong>manufacturing optimization</strong>, quality, reliability, CNC,
+        PLC systems, and data-driven industrial improvement.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn dark" href="#experience">View Experience</a>
+        <a class="btn" href="#contact">Get in Touch</a>
+      </div>
+    </div>
 
-<section id="about" class="section"><div class="container"><div class="section-title"><span class="section-num">01</span><h2>About</h2><div class="rule"></div></div><div class="about-grid"><div class="copy"><p>I'm a <strong>Mechanical Engineer</strong> and <strong>Industrial & Systems Engineering</strong> graduate student at Lamar University, focused on automation, manufacturing optimization, product reliability, quality systems, and predictive maintenance.</p><p>My work spans <strong>mechanical design</strong>, <strong>robotics and PLC automation</strong>, CNC and manufacturing processes, QA/QC, root cause analysis, and data-informed process improvement.</p><p>My goal is to improve equipment reliability, reduce downtime, strengthen quality control, and build efficient industrial systems.</p></div><aside class="glance"><h3>At A Glance</h3><div class="glance-row"><div>Location</div><div class="glance-value">Beaumont, TX</div></div><div class="glance-row"><div>Focus</div><div class="glance-value">Mechanical / Automation / Industrial</div></div><div class="glance-row"><div>Degrees</div><div class="glance-value">M.S. Industrial Engineering & B.S. Mechanical Engineering</div></div><div class="glance-row"><div>Top GPA</div><div class="glance-value">3.8 / 4.0</div></div><div class="glance-row"><div>Status</div><div class="glance-value">Open to roles</div></div></aside></div></div></section>
+    <div class="photo-card">
+      <img src="./profile.jpg?v=2" alt="Md Majharul Islam">
+      <div class="photo-label">OPEN TO WORK</div>
+    </div>
+  </section>
 
-<section id="experience" class="section"><div class="container"><div class="section-title"><span class="section-num">02</span><h2>Experience</h2><div class="rule"></div></div><div class="timeline">
-<article class="role"><div><div class="date">May 2022 - Dec 2023</div><div class="place">Liuzhou, China</div></div><div><h3>Mechanical Engineering Intern</h3><div class="company">Guangxi Ligong Machinery Co., Ltd.</div><ul><li>Performed assembly validation and component review using SolidWorks and Fusion 360.</li><li>Conducted quality inspections for mechanical, manufacturing, and safety standards.</li><li>Supported root cause analysis, process improvement, and technical documentation.</li></ul></div></article>
-<article class="role"><div><div class="date">Nov 2018 - Dec 2019</div><div class="place">Dhaka, Bangladesh</div></div><div><h3>Assistant Engineer</h3><div class="company">IFAD Autos PLC</div><ul><li>Managed maintenance and troubleshooting for mechanical and automotive systems.</li><li>Performed quality inspections and technical design reviews for vehicle components.</li><li>Used CAD tools for design support, testing, repair planning, and downtime reduction.</li></ul></div></article>
-</div></div></section>
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title"><span class="num">01</span><h2>About</h2><div class="line"></div></div>
+      <div class="about-grid">
+        <div class="copy">
+          <p>I'm a <strong>Mechanical Engineer</strong> and <strong>Industrial & Systems Engineering</strong> graduate student at Lamar University.</p>
+          <p>My work spans <strong>mechanical design</strong>, <strong>robotics and PLC automation</strong>, CNC and manufacturing processes, technical documentation, QA/QC, root cause analysis, and data-informed process improvement.</p>
+          <p><strong>My goal</strong> is to improve equipment reliability, reduce downtime, strengthen quality control, and build efficient, safe, measurable industrial systems.</p>
+        </div>
 
-<section id="projects" class="section"><div class="container"><div class="section-title"><span class="section-num">03</span><h2>Projects</h2><div class="rule"></div></div><div class="project-grid">
-<article class="project-card"><div class="project-type">AI Quality Control</div><h3>Product Defect Analyzer</h3><div class="project-org">Lamar University</div><p>AI-assisted inspection concept using computer vision to identify packaging defects and improve quality reporting.</p><div class="pills"><span class="pill">AI Vision</span><span class="pill">Quality Control</span><span class="pill">Python</span></div></article>
-<article class="project-card"><div class="project-type">Engine Performance</div><h3>Smart Combustion Injector</h3><div class="project-org">Lamar Cardinal Idea Pitch</div><p>ECU-integrated injector concept focused on fuel efficiency, emissions reduction, and improved combustion control.</p><div class="pills"><span class="pill">Mechanical Design</span><span class="pill">Engine Systems</span></div></article>
-<article class="project-card"><div class="project-type">CNC / DFM</div><h3>Two-Cylinder Engine Assembly</h3><div class="project-org">Lamar University</div><p>Fusion 360 assembly and CNC optimization project using DFM/DFA and manufacturing tolerance analysis.</p><div class="pills"><span class="pill">Fusion 360</span><span class="pill">CNC</span><span class="pill">CAD</span></div></article>
-<article class="project-card"><div class="project-type">PLC Automation</div><h3>Conveyor & Kiln Unloading System</h3><div class="project-org">Tiles Manufacturing Factory</div><p>PLC-controlled conveyor and kiln unloading system using ladder logic, Omron PLC, Yaskawa V1000, and HMI monitoring.</p><div class="pills"><span class="pill">PLC</span><span class="pill">Omron</span><span class="pill">HMI</span></div></article>
-</div></div></section>
+        <aside class="glance">
+          <h3>At A Glance</h3>
+          <div class="row"><span>Location</span><span>Beaumont, TX</span></div>
+          <div class="row"><span>Focus</span><span>Mechanical / Automation / Industrial</span></div>
+          <div class="row"><span>Degrees</span><span>M.S. Industrial Engineering & B.S. Mechanical Engineering</span></div>
+          <div class="row"><span>Top GPA</span><span>3.8 / 4.0</span></div>
+          <div class="row"><span>Strength</span><span>Manufacturing + Automation + Reliability</span></div>
+          <div class="row"><span>Status</span><span>Open to roles</span></div>
+        </aside>
+      </div>
+    </div>
+  </section>
 
-<section id="skills" class="section"><div class="container"><div class="section-title"><span class="section-num">04</span><h2>Skills</h2><div class="rule"></div></div><div class="skills-grid">
-<div class="skill-group"><h3>Design & Simulation</h3><div class="pills"><span class="pill">SolidWorks</span><span class="pill">Fusion 360</span><span class="pill">ANSYS</span><span class="pill">AutoCAD</span><span class="pill">GD&T</span><span class="pill">FEA</span></div></div>
-<div class="skill-group"><h3>Automation & Manufacturing</h3><div class="pills"><span class="pill">PLC Programming</span><span class="pill">Omron PLC</span><span class="pill">Yaskawa V1000</span><span class="pill">CNC Milling</span><span class="pill">Lean</span></div></div>
-<div class="skill-group"><h3>Quality & Data</h3><div class="pills"><span class="pill">RCA</span><span class="pill">FMEA</span><span class="pill">Six Sigma</span><span class="pill">Python</span><span class="pill">MATLAB</span><span class="pill">SQL</span></div></div>
-</div></div></section>
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-title"><span class="num">02</span><h2>Experience</h2><div class="line"></div></div>
+      <div class="timeline">
+        <article class="role">
+          <div><div class="date">May 2022 - Dec 2023</div><div class="place">Liuzhou, China</div></div>
+          <div>
+            <h3>Mechanical Engineering Intern</h3>
+            <div class="company">Guangxi Ligong Machinery Co., Ltd.</div>
+            <ul>
+              <li>Performed spatial integration, assembly validation, and mechanical component review using SolidWorks and Fusion 360.</li>
+              <li>Conducted quality inspections and supported compliance with mechanical, manufacturing, and safety standards.</li>
+              <li>Supported troubleshooting and root cause analysis for automotive and industrial manufacturing systems.</li>
+              <li>Designed and tested components that improved manufacturing efficiency and reduced production cost.</li>
+            </ul>
+          </div>
+        </article>
 
-<section id="education" class="section"><div class="container"><div class="section-title"><span class="section-num">05</span><h2>Education</h2><div class="rule"></div></div>
-<div class="education-card"><div><h3>M.S., Industrial Engineering</h3><div class="edu-school">Lamar University</div></div><div class="edu-date">GPA 3.8<span>May 2026</span></div></div>
-<div class="education-card"><div><h3>B.S., Mechanical Engineering</h3><div class="edu-school">Guangxi University of Science and Technology</div></div><div class="edu-date">GPA 3.8<span>Jan 2024</span></div></div>
-<h3 class="cert-title">Certifications</h3><div class="pills"><span class="pill">Six Sigma White Belt</span><span class="pill">Root Cause Analysis</span><span class="pill">Project Management</span><span class="pill">Supply Chain</span><span class="pill">Industrial Automation</span><span class="pill">Internal Audit</span></div>
-</div></section>
+        <article class="role">
+          <div><div class="date">Nov 2018 - Dec 2019</div><div class="place">Dhaka, Bangladesh</div></div>
+          <div>
+            <h3>Assistant Engineer</h3>
+            <div class="company">IFAD Autos PLC</div>
+            <ul>
+              <li>Managed maintenance and troubleshooting for mechanical and automotive systems while supporting safety compliance.</li>
+              <li>Performed quality control inspections and technical design reviews for vehicle components.</li>
+              <li>Used CAD tools to support component design, testing, repair planning, and downtime reduction.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="section"><div class="container"><div class="contact-panel"><h2>Let's <em>work together.</em></h2><p>Open to mechanical, manufacturing, automation, industrial, quality, reliability, maintenance, and project engineering opportunities.</p><div class="contact-buttons"><a href="mailto:islammdmajharul116@gmail.com">Email</a><a href="tel:+14096007819">Phone</a><a href="https://www.linkedin.com/in/md-majharul-islam6/" target="_blank">LinkedIn</a><a href="https://github.com/islammdmajharul116-hue" target="_blank">GitHub</a></div></div></div></section>
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title"><span class="num">03</span><h2>Projects</h2><div class="line"></div></div>
+      <div class="project-grid">
+        <article class="card">
+          <div class="type">AI Quality Control</div>
+          <h3>Product Defect Analyzer</h3>
+          <div class="org">Lamar University</div>
+          <p>AI-assisted inspection concept using computer vision to identify packaging defects and improve quality reporting.</p>
+          <div class="pills"><span class="pill">AI Vision</span><span class="pill">Quality Control</span><span class="pill">Python</span></div>
+        </article>
+
+        <article class="card">
+          <div class="type">Engine Performance</div>
+          <h3>Smart Combustion Injector</h3>
+          <div class="org">Lamar Cardinal Idea Pitch</div>
+          <p>ECU-integrated injector concept focused on fuel efficiency, emissions reduction, and improved combustion control.</p>
+          <div class="pills"><span class="pill">Mechanical Design</span><span class="pill">Engine Systems</span><span class="pill">Innovation</span></div>
+        </article>
+
+        <article class="card">
+          <div class="type">CNC / DFM</div>
+          <h3>Two-Cylinder Engine Assembly</h3>
+          <div class="org">Lamar University</div>
+          <p>Fusion 360 assembly and CNC optimization project using DFM/DFA and manufacturing tolerance analysis.</p>
+          <div class="pills"><span class="pill">Fusion 360</span><span class="pill">CNC</span><span class="pill">CAD</span></div>
+        </article>
+
+        <article class="card">
+          <div class="type">PLC Automation</div>
+          <h3>Conveyor & Kiln Unloading System</h3>
+          <div class="org">Tiles Manufacturing Factory</div>
+          <p>PLC-controlled conveyor and kiln unloading system using ladder logic, Omron PLC, Yaskawa V1000, and HMI monitoring.</p>
+          <div class="pills"><span class="pill">PLC</span><span class="pill">Omron</span><span class="pill">HMI</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title"><span class="num">04</span><h2>Skills</h2><div class="line"></div></div>
+      <div class="skills-grid">
+        <div class="skill"><h3>Design & Simulation</h3><div class="pills"><span class="pill">SolidWorks</span><span class="pill">Fusion 360</span><span class="pill">ANSYS</span><span class="pill">AutoCAD</span><span class="pill">GD&T</span><span class="pill">FEA</span></div></div>
+        <div class="skill"><h3>Automation & Manufacturing</h3><div class="pills"><span class="pill">PLC Programming</span><span class="pill">Omron PLC</span><span class="pill">Yaskawa V1000</span><span class="pill">CNC Milling</span><span class="pill">Lean</span></div></div>
+        <div class="skill"><h3>Quality & Data</h3><div class="pills"><span class="pill">RCA</span><span class="pill">FMEA</span><span class="pill">Six Sigma</span><span class="pill">Python</span><span class="pill">MATLAB</span><span class="pill">SQL</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-title"><span class="num">05</span><h2>Education</h2><div class="line"></div></div>
+      <div class="edu-card"><div><h3>M.S., Industrial Engineering</h3><div class="school">Lamar University</div></div><div class="gpa">GPA 3.8<span>May 2026</span></div></div>
+      <div class="edu-card"><div><h3>B.S., Mechanical Engineering</h3><div class="school">Guangxi University of Science and Technology</div></div><div class="gpa">GPA 3.8<span>Jan 2024</span></div></div>
+      <div class="edu-card"><div><h3>Higher National Diploma, Marine Engineering</h3><div class="school">Western Ideal Institute</div></div><div class="gpa">GPA 3.4<span>Feb 2018</span></div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-panel">
+        <h2>Let's <em>work together.</em></h2>
+        <p>Open to mechanical engineering, manufacturing engineering, automation engineering, industrial engineering, quality engineering, reliability, maintenance, and project engineering opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:islammdmajharul116@gmail.com">Email</a>
+          <a href="tel:+14096007819">Phone</a>
+          <a href="https://www.linkedin.com/in/md-majharul-islam6/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/islammdmajharul116-hue" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
 <footer>&copy; 2026 Md Majharul Islam - Built with care</footer>
 </body>
 </html>
