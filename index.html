@@ -12,7 +12,7 @@ a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 60p
 .nav{position:sticky;top:0;z-index:50;background:rgba(244,239,227,.96);border-top:4px solid var(--gold);border-bottom:1px solid var(--line)}
 .nav-inner{width:min(1460px,calc(100% - 70px));margin:auto;height:72px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:Georgia,serif;font-size:25px;font-weight:900}.logo span{color:var(--gold)}
-.nav-links{display:flex;gap:30px;font-weight:800;color:var(--muted);letter-spacing:.8px;font-size:14px}.nav-links a:hover{color:var(--ink)}
+.nav-links{display:flex;gap:22px;font-weight:800;color:var(--muted);letter-spacing:.8px;font-size:13px}.nav-links a:hover{color:var(--ink)}
 .hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:1.08fr .72fr;gap:62px;align-items:center;padding:64px 0 72px}
 .eyebrow,.num,.date,.type,.skill h3,.cert-heading{color:var(--gold);font-family:"Courier New",monospace;font-weight:900;letter-spacing:3px;text-transform:uppercase}
 .eyebrow{margin-bottom:24px;font-size:14px}.eyebrow:before{content:"";display:inline-block;width:48px;height:1px;background:var(--gold);vertical-align:middle;margin-right:16px}
@@ -28,13 +28,14 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif}h1{margin:0;font-size:clamp
 .row{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:15px 0;border-top:1px dashed var(--line)}.row:first-of-type{border-top:0}.row span:first-child{color:var(--muted)}.row span:last-child{text-align:right;font-weight:900}
 .timeline{border-top:1px solid var(--line)}.role{display:grid;grid-template-columns:245px 1fr;gap:70px;padding:48px 0;border-bottom:1px solid var(--line)}.place{color:var(--muted);margin-top:10px}.role h3{font-size:30px;margin:0}.company{color:var(--green);font-weight:900;font-size:18px;margin:4px 0 16px}.role li{font-size:17px;margin-bottom:9px}.role li::marker{color:var(--gold)}
 .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}.card h3{font-size:28px;line-height:1.15;margin:0 0 8px}.org{color:var(--green);font-weight:900;margin-bottom:16px}.card p{font-size:16px;color:#33413c}.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.pill{border:1px solid var(--line);background:rgba(255,255,255,.35);border-radius:999px;padding:8px 13px;font-size:14px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.gallery-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;overflow:hidden}.gallery-card.featured{grid-column:span 2}.gallery-card img{display:block;width:100%;height:270px;object-fit:cover}.gallery-card.featured img{height:360px}.gallery-body{padding:22px}.gallery-body h3{font-size:25px;line-height:1.15;margin:0 0 8px}.gallery-body p{margin:0;color:#33413c}.press-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px}.press-card{display:flex;flex-direction:column;gap:12px;background:rgba(239,231,216,.76);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:7px;padding:28px}.press-card h3{font-size:26px;line-height:1.14;margin:0}.press-card p{margin:0;color:#33413c}.press-card a{font-weight:900;color:var(--green)}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.skill h3{color:var(--green);font-size:15px;border-bottom:1px solid var(--line);padding-bottom:13px}
 .edu-card{display:grid;grid-template-columns:1fr 170px;align-items:center;gap:30px;margin-bottom:20px}.edu-card h3{font-size:27px;margin:0 0 6px}.school{color:var(--green);font-weight:900}.gpa{text-align:right;font-family:"Courier New",monospace;font-weight:900}.gpa span{display:block;color:var(--muted);font-family:Arial;font-weight:400;margin-top:6px}
 .award-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.award{border-left:4px solid var(--gold)}
 .cert-intro{max-width:860px;font-size:19px;color:#38443f;margin:-22px 0 34px}.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.cert-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;padding:28px}.cert-card h3{margin:0 0 18px;color:var(--green);font-size:24px}.cert-list{display:grid;gap:12px}.cert-link{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;border-top:1px dashed var(--line);padding-top:12px;font-weight:900}.cert-link:first-child{border-top:0;padding-top:0}.cert-link span{color:var(--muted);font-family:"Courier New",monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
 .contact-panel{background:linear-gradient(135deg,rgba(16,32,25,.98),rgba(25,40,31,.95));color:var(--white);border-radius:8px;padding:74px 40px;text-align:center}.contact-panel h2{font-size:clamp(42px,5vw,68px);margin:0}.contact-panel h2 em{color:var(--gold)}.contact-panel p{font-size:19px;color:#d8d2c6;max-width:760px;margin:24px auto 34px}.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}.contact-links a{min-width:170px;border:1px solid rgba(255,255,255,.35);padding:15px 17px;font-weight:900}
 footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier New",monospace}
-@media(max-width:950px){.hero,.about-grid,.project-grid,.skills-grid,.role,.award-grid,.cert-grid{grid-template-columns:1fr}.photo-card{margin:0}.nav-inner{height:auto;align-items:flex-start;flex-direction:column;padding:16px 0}.nav-links{gap:14px;font-size:13px;flex-wrap:wrap}.section-title{grid-template-columns:auto 1fr}.line{grid-column:1/-1}}
+@media(max-width:950px){.hero,.about-grid,.project-grid,.gallery-grid,.press-grid,.skills-grid,.role,.award-grid,.cert-grid{grid-template-columns:1fr}.gallery-card.featured{grid-column:auto}.photo-card{margin:0}.nav-inner{height:auto;align-items:flex-start;flex-direction:column;padding:16px 0}.nav-links{gap:14px;font-size:13px;flex-wrap:wrap}.section-title{grid-template-columns:auto 1fr}.line{grid-column:1/-1}}
 @media(max-width:650px){.container{width:min(100% - 28px,1320px)}h1{font-size:50px}.hero p,.copy{font-size:18px}.hero-buttons{flex-direction:column}.row,.edu-card{grid-template-columns:1fr}.row span:last-child,.gpa{text-align:left}}
 </style>
 </head>
@@ -43,7 +44,7 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
   <div class="nav-inner">
     <a class="logo" href="#home">MMI<span>.</span></a>
     <div class="nav-links">
-      <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#awards">AWARDS</a><a href="#certifications">CERTIFICATIONS</a><a href="#contact">CONTACT</a>
+      <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#gallery">GALLERY</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#awards">AWARDS</a><a href="#certifications">CERTIFICATIONS</a><a href="#contact">CONTACT</a>
     </div>
   </div>
 </nav>
@@ -99,8 +100,22 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
   </div>
 </div></section>
 
+<section id="gallery" class="section"><div class="container">
+  <div class="section-title"><span class="num">04</span><h2>Work Gallery & Press</h2><div class="line"></div></div>
+  <div class="gallery-grid">
+    <article class="gallery-card featured"><img src="assets/automation-lab.png" alt="Hands-on industrial automation lab work"><div class="gallery-body"><div class="type">Automation Lab</div><h3>Industrial controls and electrical systems testing</h3><p>Hands-on work with training panels, motor controls, instrumentation, wiring, and troubleshooting workflows.</p></div></article>
+    <article class="gallery-card"><img src="assets/ligong-office.png" alt="Guangxi Ligong Machinery workplace"><div class="gallery-body"><div class="type">Industry Experience</div><h3>Guangxi Ligong Machinery Co., Ltd.</h3><p>Engineering internship environment supporting documentation, process review, and manufacturing improvement work.</p></div></article>
+    <article class="gallery-card"><img src="assets/formula-vehicle.png" alt="Formula-style vehicle engineering activity"><div class="gallery-body"><div class="type">Vehicle Systems</div><h3>Formula-style engineering exposure</h3><p>Practical exposure to vehicle design, racing systems, safety preparation, and mechanical performance environments.</p></div></article>
+    <article class="gallery-card"><img src="assets/newspaper-feature.png" alt="Newspaper feature from Liuzhou Evening News"><div class="gallery-body"><div class="type">Media Feature</div><h3>Featured in Liuzhou Evening News</h3><p>Newspaper coverage from an international student visit and cultural learning event in Guangxi, China.</p></div></article>
+  </div>
+  <div class="press-grid">
+    <article class="press-card"><div class="type">Press Coverage</div><h3>Bangladeshi students win top prize at Lamar University</h3><p>Coverage of a Lamar University startup competition win connected to engineering innovation and student entrepreneurship.</p><a href="https://tob.news/bangladeshi-students-win-top-prize-at-lamar-university/" target="_blank">Read on TOB News</a></article>
+    <article class="press-card"><div class="type">Press Coverage</div><h3>Bangladeshi students at Lamar University win top prize in tech startup competition</h3><p>National media coverage highlighting the team award and technology startup achievement.</p><a href="https://www.thedailystar.net/business/organisation-news/press-releases/news/bangladeshi-students-lamar-university-win-top-prize-tech-startup-competition-4034841" target="_blank">Read on The Daily Star</a></article>
+  </div>
+</div></section>
+
 <section id="skills" class="section"><div class="container">
-  <div class="section-title"><span class="num">04</span><h2>Skills</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">05</span><h2>Skills</h2><div class="line"></div></div>
   <div class="skills-grid">
     <div class="skill"><h3>Engineering & Design</h3><div class="pills"><span class="pill">Mechanical Engineering</span><span class="pill">Automotive Engineering</span><span class="pill">Marine Engineering</span><span class="pill">Siemens NX</span><span class="pill">SolidWorks</span><span class="pill">AutoCAD Mechanical</span><span class="pill">Fusion 360</span><span class="pill">ANSYS</span><span class="pill">Mastercam</span></div></div>
     <div class="skill"><h3>Automation & Manufacturing</h3><div class="pills"><span class="pill">PLC Programming</span><span class="pill">Ladder Logic</span><span class="pill">Factory I/O</span><span class="pill">Omron</span><span class="pill">Yaskawa V1000</span><span class="pill">CNC Milling</span><span class="pill">CNC Operation</span><span class="pill">CIM</span><span class="pill">Smart Manufacturing</span></div></div>
@@ -109,14 +124,14 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
 </div></section>
 
 <section id="education" class="section"><div class="container">
-  <div class="section-title"><span class="num">05</span><h2>Education</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">06</span><h2>Education</h2><div class="line"></div></div>
   <div class="edu-card"><div><h3>M.S., Industrial and Systems Engineering</h3><div class="school">Lamar University, Beaumont, TX</div></div><div class="gpa">GPA 3.65<span>May 2026</span></div></div>
   <div class="edu-card"><div><h3>B.S., Mechanical Engineering</h3><div class="school">Guangxi University of Science and Technology, China</div></div><div class="gpa">GPA 3.82<span>Jan 2024</span></div></div>
   <div class="edu-card"><div><h3>Diploma, Marine Engineering</h3><div class="school">Western Ideal Institute, Dhaka, Bangladesh</div></div><div class="gpa">GPA 3.3<span>July 2018</span></div></div>
 </div></section>
 
 <section id="awards" class="section"><div class="container">
-  <div class="section-title"><span class="num">06</span><h2>Awards</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">07</span><h2>Awards</h2><div class="line"></div></div>
   <div class="award-grid">
     <article class="card award"><div class="type">Innovation Award</div><h3>AI-Driven Industrial Safety & Energy Systems Innovation Award</h3><div class="org">IUILA Awards 2026 | London Metropolitan University</div><p>Certificate of Excellence recognizing innovative work combining mechanical engineering design, automation frameworks, and AI to optimize large-scale industrial safety and energy systems.</p></article>
     <article class="card award"><div class="type">Conference Leadership</div><h3>Technical Program Committee Member</h3><div class="org">ICDAM 2026</div><p>Served on the Technical Program Committee for the 7th International Conference on Data Analytics and Management, organized with London Metropolitan University, WSG University, Portalegre Polytechnic University, and SGGW Management Institute.</p></article>
@@ -126,7 +141,7 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
 </div></section>
 
 <section id="certifications" class="section"><div class="container">
-  <div class="section-title"><span class="num">07</span><h2>Certifications</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">08</span><h2>Certifications</h2><div class="line"></div></div>
   <p class="cert-intro">A focused collection of professional training across manufacturing, quality, automation, supply chain, data analytics, AI, cloud fundamentals, and business leadership. Each item links to the certificate PDF.</p>
   <div class="cert-grid">
     <article class="cert-card">
