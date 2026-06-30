@@ -23,11 +23,12 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif}h1{margin:0;font-size:clamp
 .photo-card img{display:block;width:100%;height:290px;object-fit:cover;object-position:center top;border-radius:4px;background:white}
 .photo-label{position:absolute;left:26px;bottom:-20px;background:var(--green);color:white;padding:10px 16px;border-radius:4px;font-weight:900;letter-spacing:1px;font-size:14px}
 .section{padding:86px 0}.section-title{display:grid;grid-template-columns:auto auto 1fr;gap:22px;align-items:center;margin-bottom:56px}.section-title h2{margin:0;font-size:clamp(40px,5vw,62px);letter-spacing:-2px}.line{height:1px;background:var(--line)}
-.about-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:62px}.copy{font-size:20px;color:#38443f}.copy p{margin:0 0 26px}.copy strong{color:var(--ink)}
+.about-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:62px}.copy{font-size:20px;color:#38443f}.copy p{margin:0 0 26px}.copy strong{color:var(--ink)}.about-metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:rgba(239,231,216,.6);margin-top:42px}.metric{padding:24px;text-align:center;border-left:1px solid var(--line)}.metric:first-child{border-left:0}.metric strong{display:block;color:var(--green);font-family:Georgia,serif;font-size:34px;line-height:1}.metric span{display:block;color:var(--muted);font-size:13px;margin-top:10px}
 .glance,.card,.edu-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;padding:32px}.glance h3{margin:0 0 20px;color:var(--green);font-family:"Courier New",monospace;letter-spacing:4px;text-transform:uppercase}
 .row{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:15px 0;border-top:1px dashed var(--line)}.row:first-of-type{border-top:0}.row span:first-child{color:var(--muted)}.row span:last-child{text-align:right;font-weight:900}
 .timeline{border-top:1px solid var(--line)}.role{display:grid;grid-template-columns:245px 1fr;gap:70px;padding:48px 0;border-bottom:1px solid var(--line)}.place{color:var(--muted);margin-top:10px}.role h3{font-size:30px;margin:0}.company{color:var(--green);font-weight:900;font-size:18px;margin:4px 0 16px}.role li{font-size:17px;margin-bottom:9px}.role li::marker{color:var(--gold)}
 .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}.card h3{font-size:28px;line-height:1.15;margin:0 0 8px}.org{color:var(--green);font-weight:900;margin-bottom:16px}.card p{font-size:16px;color:#33413c}.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.pill{border:1px solid var(--line);background:rgba(255,255,255,.35);border-radius:999px;padding:8px 13px;font-size:14px}
+.repo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.repo-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;padding:24px;display:flex;flex-direction:column;gap:12px}.repo-card h3{font-size:22px;line-height:1.15;margin:0}.repo-card p{font-size:15px;color:#33413c;margin:0}.repo-card a{margin-top:auto;color:var(--green);font-weight:900}.repo-meta{color:var(--gold);font-family:"Courier New",monospace;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.gallery-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;overflow:hidden}.gallery-card.featured{grid-column:span 2}.gallery-card img{display:block;width:100%;height:220px;object-fit:cover}.gallery-card.featured img{height:300px}.gallery-body{padding:22px}.gallery-body h3{font-size:25px;line-height:1.15;margin:0 0 8px}.gallery-body p{margin:0;color:#33413c}.press-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px}.press-card{display:flex;flex-direction:column;gap:12px;background:rgba(239,231,216,.76);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:7px;padding:28px}.press-card h3{font-size:26px;line-height:1.14;margin:0}.press-card p{margin:0;color:#33413c}.press-card a{font-weight:900;color:var(--green)}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.skill h3{color:var(--green);font-size:15px;border-bottom:1px solid var(--line);padding-bottom:13px}
 .edu-card{display:grid;grid-template-columns:1fr 170px;align-items:center;gap:30px;margin-bottom:20px}.edu-card h3{font-size:27px;margin:0 0 6px}.school{color:var(--green);font-weight:900}.gpa{text-align:right;font-family:"Courier New",monospace;font-weight:900}.gpa span{display:block;color:var(--muted);font-family:Arial;font-weight:400;margin-top:6px}
@@ -36,8 +37,8 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif}h1{margin:0;font-size:clamp
 .cert-intro{max-width:860px;font-size:19px;color:#38443f;margin:-22px 0 34px}.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.cert-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;padding:28px}.cert-card h3{margin:0 0 18px;color:var(--green);font-size:24px}.cert-list{display:grid;gap:12px}.cert-link{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;border-top:1px dashed var(--line);padding-top:12px;font-weight:900}.cert-link:first-child{border-top:0;padding-top:0}.cert-link span{color:var(--muted);font-family:"Courier New",monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
 .contact-panel{background:linear-gradient(135deg,rgba(16,32,25,.98),rgba(25,40,31,.95));color:var(--white);border-radius:8px;padding:74px 40px;text-align:center}.contact-panel h2{font-size:clamp(42px,5vw,68px);margin:0}.contact-panel h2 em{color:var(--gold)}.contact-panel p{font-size:19px;color:#d8d2c6;max-width:760px;margin:24px auto 34px}.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}.contact-links a{min-width:170px;border:1px solid rgba(255,255,255,.35);padding:15px 17px;font-weight:900}
 footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier New",monospace}
-@media(max-width:950px){.hero,.about-grid,.project-grid,.gallery-grid,.press-grid,.skills-grid,.role,.award-grid,.publication-grid,.cert-grid{grid-template-columns:1fr}.gallery-card.featured{grid-column:auto}.photo-card{margin:0}.nav-inner{height:auto;align-items:flex-start;flex-direction:column;padding:16px 0}.nav-links{gap:14px;font-size:13px;flex-wrap:wrap}.section-title{grid-template-columns:auto 1fr}.line{grid-column:1/-1}}
-@media(max-width:650px){.container{width:min(100% - 28px,1320px)}h1{font-size:50px}.hero p,.copy{font-size:18px}.hero-buttons{flex-direction:column}.row,.edu-card{grid-template-columns:1fr}.row span:last-child,.gpa{text-align:left}}
+@media(max-width:950px){.hero,.about-grid,.project-grid,.repo-grid,.gallery-grid,.press-grid,.skills-grid,.role,.award-grid,.publication-grid,.cert-grid{grid-template-columns:1fr}.gallery-card.featured{grid-column:auto}.photo-card{margin:0}.nav-inner{height:auto;align-items:flex-start;flex-direction:column;padding:16px 0}.nav-links{gap:14px;font-size:13px;flex-wrap:wrap}.section-title{grid-template-columns:auto 1fr}.line{grid-column:1/-1}.about-metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(odd){border-left:0}.metric:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:650px){.container{width:min(100% - 28px,1320px)}h1{font-size:50px}.hero p,.copy{font-size:18px}.hero-buttons{flex-direction:column}.row,.edu-card{grid-template-columns:1fr}.row span:last-child,.gpa{text-align:left}.about-metrics{grid-template-columns:1fr}.metric{border-left:0;border-top:1px solid var(--line)}.metric:first-child{border-top:0}}
 </style>
 </head>
 <body>
@@ -45,7 +46,7 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
   <div class="nav-inner">
     <a class="logo" href="#home">MMI<span>.</span></a>
     <div class="nav-links">
-      <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#gallery">GALLERY</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#awards">AWARDS</a><a href="#publications">PUBLICATIONS</a><a href="#certifications">CERTIFICATIONS</a><a href="resume-md-majharul-islam.pdf" target="_blank">RESUME</a><a href="#contact">CONTACT</a>
+      <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#repositories">REPOS</a><a href="#gallery">GALLERY</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#awards">AWARDS</a><a href="#publications">PUBLICATIONS</a><a href="#certifications">CERTIFICATIONS</a><a href="resume-md-majharul-islam.pdf" target="_blank">RESUME</a><a href="#contact">CONTACT</a>
     </div>
   </div>
 </nav>
@@ -65,9 +66,9 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
   <div class="section-title"><span class="num">01</span><h2>About</h2><div class="line"></div></div>
   <div class="about-grid">
     <div class="copy">
-      <p>I'm a <strong>Mechanical Engineer</strong> and <strong>Industrial & Systems Engineering</strong> graduate student at Lamar University, focused on automation, manufacturing optimization, product reliability, process engineering, and predictive maintenance.</p>
-      <p>My work spans <strong>mechanical design</strong>, robotics and PLC automation, CNC and manufacturing processes, technical documentation, QA/QC, Root Cause Analysis, Value Stream Mapping, Lean Six Sigma, SAP ERP, and data-informed process improvement.</p>
-      <p><strong>My goal</strong> is to improve equipment reliability, reduce downtime, strengthen quality control, and build efficient, safe, measurable industrial systems.</p>
+      <p>I'm an <strong>Industrial & Systems Engineer</strong> with an M.S. from Lamar University and a core foundation in <strong>Mechanical Engineering</strong>. My work focuses on automation, manufacturing optimization, product reliability, process engineering, and predictive maintenance.</p>
+      <p>My technical background spans <strong>mechanical design</strong>, robotics and PLC automation, CNC and manufacturing processes, technical documentation, QA/QC, Root Cause Analysis, Value Stream Mapping, Lean Six Sigma, SAP ERP, and data-informed process improvement.</p>
+      <p><strong>My goal</strong> is to use data-driven engineering methods to improve equipment reliability, reduce downtime, strengthen quality control, and build efficient, safe, measurable industrial systems.</p>
     </div>
     <aside class="glance">
       <h3>At A Glance</h3>
@@ -89,6 +90,12 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
     <article class="role"><div><div class="date">Jan 2019 - Jan 2020</div><div class="place">Dhaka, Bangladesh</div></div><div><h3>Fire Protection Engineer Intern</h3><div class="company">Deck Engine Personal Training Center (DEPTC)</div><ul><li>Completed fire safety and health environment training focused on fire prevention, emergency response, and workplace hazard management.</li><li>Applied safety management skills through drills, risk assessments, safety audits, and hazard-control exercises.</li><li>Collaborated with professionals on workplace problem solving covering air quality, ergonomics, and compliant safety practices.</li></ul></div></article>
     <article class="role"><div><div class="date">Dec 2018 - Dec 2019</div><div class="place">Dhaka, Bangladesh</div></div><div><h3>Engine Cadet Intern</h3><div class="company">Bangladesh Inland and Water Transport Authority (BIWTA)</div><ul><li>Completed ship engine training on the inland training ship M.V. Siddiqui, equipped with Volvo Penta engines.</li><li>Supported main engine inspection, maintenance watchkeeping, hydraulic auxiliary machinery operation, and safety-logbook record keeping.</li><li>Participated in machinery workshop activities including hands-on welding training, troubleshooting, and mechanical maintenance tasks.</li></ul></div></article>
   </div>
+  <div class="about-metrics">
+    <div class="metric"><strong>15%</strong><span>verified fuel-efficiency gain in Smart Combustion project</span></div>
+    <div class="metric"><strong>25%</strong><span>throughput improvement from Lean/TPM layout work</span></div>
+    <div class="metric"><strong>18</strong><span>engineering software and automation repositories</span></div>
+    <div class="metric"><strong>8</strong><span>published research works and technical papers</span></div>
+  </div>
 </div></section>
 
 <section id="projects" class="section"><div class="container">
@@ -104,8 +111,32 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
   </div>
 </div></section>
 
+<section id="repositories" class="section"><div class="container">
+  <div class="section-title"><span class="num">04</span><h2>Code & Engineering Tools</h2><div class="line"></div></div>
+  <div class="repo-grid">
+    <article class="repo-card"><div class="repo-meta">Python / Logistics</div><h3>CAD Inventory Pallet Optimizer</h3><p>Logistics prototype for CAD volume reuse, stochastic inventory planning, pallet density, and warehouse slotting.</p><a href="https://github.com/islammdmajharul116-hue/cad-inventory-pallet-optimizer" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / Energy</div><h3>Thermodynamic Energy Carbon Optimizer</h3><p>Plant utility optimizer that combines thermodynamic compressor modeling, energy-price scheduling, and carbon-compliance limits.</p><a href="https://github.com/islammdmajharul116-hue/thermodynamic-energy-carbon-optimizer" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / Quality</div><h3>Vision Six Sigma DFM Engine</h3><p>Prototype quality engine connecting CAD tolerances, DFM rules, JFC control logic, and production-line inspection measurements.</p><a href="https://github.com/islammdmajharul116-hue/vision-six-sigma-dfm-engine" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / RCA</div><h3>Automated Cavitation RCA</h3><p>Pump cavitation diagnostic prototype combining NPSH physics, acoustic signatures, root-cause analysis, and automated PLC-style corrective actions.</p><a href="https://github.com/islammdmajharul116-hue/automated-cavitation-rca" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / Digital Twin</div><h3>Cyber Physical Digital Twin OEE</h3><p>Real-time thermal-stress digital twin connecting mechanical degradation to OEE loss and production-line bottleneck shifts.</p><a href="https://github.com/islammdmajharul116-hue/cyber-physical-digital-twin-oee" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Rust / Compressor</div><h3>Compressor Utility Cost Optimizer</h3><p>Rust compressor utility optimizer for pneumatic leak detection, specific power tracking, and plant energy cost reduction.</p><a href="https://github.com/islammdmajharul116-hue/Compressor-Utility-Cost-Optimizer" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">MATLAB / Ergonomics</div><h3>Ergonomic Lift Stress Simulator</h3><p>MATLAB/Octave ergonomic lift stress simulator for joint moments, load balance, center-of-gravity forces, and safety scoring.</p><a href="https://github.com/islammdmajharul116-hue/Ergonomic-Lift-Stress-Simulator" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">OpenSCAD / Packaging</div><h3>Lean Packaging CAD Configurator</h3><p>OpenSCAD parametric CAD configurator for lean packaging fixture design and warehouse cube optimization.</p><a href="https://github.com/islammdmajharul116-hue/Lean-Packaging-CAD-Configurator" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Go / Cavitation</div><h3>Valve Cavitation Hydrodynamic Monitor</h3><p>Go cavitation detection tool using pressure differential and acoustic sensor logs to trigger PLC-style valve protection logic.</p><a href="https://github.com/islammdmajharul116-hue/Valve-Cavitation-Hydrodynamic-Monitor" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / TPM</div><h3>Heavy Equipment TPM Dashboard</h3><p>Python Streamlit TPM dashboard for heavy equipment health scoring, degradation tracking, and preventive maintenance scheduling.</p><a href="https://github.com/islammdmajharul116-hue/Heavy-Equipment-TPM-Dashboard" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Julia / SPC</div><h3>Tolerance Stackup SPC Quality Tool</h3><p>Julia SPC and tolerance stack-up analyzer for X-bar/R charts, tool drift detection, and first-pass assembly risk prediction.</p><a href="https://github.com/islammdmajharul116-hue/Tolerance-Stackup-SPC-Quality-Tool" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">C / PLC</div><h3>Thermal Processing PLC OEE Controller</h3><p>C PLC-style kiln controller simulation with thermal interlocks, fault logging, and real-time OEE availability tracking.</p><a href="https://github.com/islammdmajharul116-hue/Thermal-Processing-PLC-OEE-Controller" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / DFM</div><h3>Computer Vision Work Measurement DFM Analyzer</h3><p>Streamlit and OpenCV industrial vision dashboard for automated work measurement, cycle-time tracking, and DFM/DFA assembly scoring.</p><a href="https://github.com/islammdmajharul116-hue/Computer-Vision-Work-Measurement-DFM-Analyzer" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">JavaScript / Digital Twin</div><h3>Robotic Assembly Line Digital Twin</h3><p>Browser-based 3D digital twin simulator for robotic assembly line balancing, OEE analysis, and material-handling path optimization.</p><a href="https://github.com/islammdmajharul116-hue/Robotic-Assembly-Line-Digital-Twin" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">R / Reliability</div><h3>Rotating Machinery RCA Reliability Dashboard</h3><p>R Shiny reliability engineering dashboard for RCA, MTBF calculation, and Weibull-based failure prediction on rotating machinery sensor logs.</p><a href="https://github.com/islammdmajharul116-hue/Rotating-Machinery-RCA-Reliability-Dashboard" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / Lean</div><h3>VSM Lead Time Calculator</h3><p>Python program to calculate VSM lead time, process time, and value-add ratios.</p><a href="https://github.com/islammdmajharul116-hue/VSM-Lead-Time-Calculator" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Python / Warehouse</div><h3>Warehouse Slotted Layout Optimizer</h3><p>Generic algorithm warehouse slotting optimizer using ABC analysis.</p><a href="https://github.com/islammdmajharul116-hue/Warehouse-Slotted-Layout-Optimizer" target="_blank">View GitHub Repo</a></article>
+    <article class="repo-card"><div class="repo-meta">Simulink / PLC</div><h3>OMRON PLC Kiln Conveyor Control</h3><p>Structured Text and Ladder Logic simulation for an OMRON PLC-based kiln conveyor unloading system with safety interlocks, thermal feedback, alarms, and fault handling.</p><a href="https://github.com/islammdmajharul116-hue/OMRON-PLC-Kiln-Conveyor-Control" target="_blank">View GitHub Repo</a></article>
+  </div>
+</div></section>
+
 <section id="gallery" class="section"><div class="container">
-  <div class="section-title"><span class="num">04</span><h2>Work Gallery & Press</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">05</span><h2>Work Gallery & Press</h2><div class="line"></div></div>
   <div class="gallery-grid">
     <article class="gallery-card"><img src="assets/automation-lab.png" alt="Hands-on industrial automation lab work"><div class="gallery-body"><div class="type">Automation Lab</div><h3>Industrial controls and electrical systems testing</h3><p>Hands-on work with training panels, motor controls, instrumentation, wiring, and troubleshooting workflows.</p></div></article>
     <article class="gallery-card"><img src="assets/ligong-office.png" alt="Guangxi Ligong Machinery workplace"><div class="gallery-body"><div class="type">Industry Experience</div><h3>Guangxi Ligong Machinery Co., Ltd.</h3><p>Engineering internship environment supporting documentation, process review, and manufacturing improvement work.</p></div></article>
@@ -126,7 +157,7 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
 </div></section>
 
 <section id="skills" class="section"><div class="container">
-  <div class="section-title"><span class="num">05</span><h2>Skills</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">06</span><h2>Skills</h2><div class="line"></div></div>
   <div class="skills-grid">
     <div class="skill"><h3>Engineering & Design</h3><div class="pills"><span class="pill">Mechanical Engineering</span><span class="pill">Automotive Engineering</span><span class="pill">Marine Engineering</span><span class="pill">Siemens NX</span><span class="pill">SolidWorks</span><span class="pill">AutoCAD Mechanical</span><span class="pill">Fusion 360</span><span class="pill">ANSYS</span><span class="pill">Mastercam</span></div></div>
     <div class="skill"><h3>Automation & Manufacturing</h3><div class="pills"><span class="pill">PLC Programming</span><span class="pill">Ladder Logic</span><span class="pill">Factory I/O</span><span class="pill">Omron</span><span class="pill">Yaskawa V1000</span><span class="pill">CNC Milling</span><span class="pill">CNC Operation</span><span class="pill">CIM</span><span class="pill">Smart Manufacturing</span></div></div>
@@ -135,14 +166,14 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
 </div></section>
 
 <section id="education" class="section"><div class="container">
-  <div class="section-title"><span class="num">06</span><h2>Education</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">07</span><h2>Education</h2><div class="line"></div></div>
   <div class="edu-card"><div><h3>M.S., Industrial and Systems Engineering</h3><div class="school">Lamar University, Beaumont, TX</div></div><div class="gpa">GPA 3.65<span>May 2026</span></div></div>
   <div class="edu-card"><div><h3>B.S., Mechanical Engineering</h3><div class="school">Guangxi University of Science and Technology, China</div></div><div class="gpa">GPA 3.82<span>Jan 2024</span></div></div>
   <div class="edu-card"><div><h3>Diploma, Marine Engineering</h3><div class="school">Western Ideal Institute, Dhaka, Bangladesh</div></div><div class="gpa">GPA 3.3<span>July 2018</span></div></div>
 </div></section>
 
 <section id="awards" class="section"><div class="container">
-  <div class="section-title"><span class="num">07</span><h2>Awards</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">08</span><h2>Awards</h2><div class="line"></div></div>
   <div class="award-grid">
     <article class="card award"><div class="type">Innovation Award</div><h3>AI-Driven Industrial Safety & Energy Systems Innovation Award</h3><div class="org">IUILA Awards 2026 | London Metropolitan University</div><p>Certificate of Excellence recognizing innovative work combining mechanical engineering design, automation frameworks, and AI to optimize large-scale industrial safety and energy systems.</p><div class="pills"><a class="pill" href="awards/award-8.pdf" target="_blank">View Certificate</a></div></article>
     <article class="card award"><div class="type">Conference Leadership</div><h3>Technical Program Committee Member</h3><div class="org">ICDAM 2026 | London Metropolitan University</div><p>Served on the Technical Program Committee for the 7th International Conference on Data Analytics and Management, organized with London Metropolitan University and partner institutions in Europe.</p><div class="pills"><a class="pill" href="awards/award-certificate-md-majharul-islam-2.pdf" target="_blank">View Certificate</a></div></article>
@@ -152,7 +183,7 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
 </div></section>
 
 <section id="publications" class="section"><div class="container">
-  <div class="section-title"><span class="num">08</span><h2>Publications</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">09</span><h2>Publications</h2><div class="line"></div></div>
   <div class="publication-grid">
     <article class="publication-card"><div class="type">Dec 2, 2025</div><h3>Sphericity Error Evaluation Based on Conical Search Algorithm</h3><div class="journal">Measurement Science and Technology</div><a href="https://iopscience.iop.org/article/10.1088/1361-6501/ae26a3?utm_source=researchgate.net&utm_medium=article" target="_blank">View Publication</a></article>
     <article class="publication-card"><div class="type">Jun 24, 2025</div><h3>Enhancement of Sulfide Based Absorber and Charge Transport Layer Solar Cell Performances Using Machine Learning and the SCAPS-1D Simulator</h3><div class="journal">Royal Society of Chemistry</div><a href="https://pubs.rsc.org/en/content/articlelanding/2025/cp/d5cp01664a/unauth" target="_blank">View Publication</a></article>
@@ -166,7 +197,7 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
 </div></section>
 
 <section id="certifications" class="section"><div class="container">
-  <div class="section-title"><span class="num">09</span><h2>Certifications</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">10</span><h2>Certifications</h2><div class="line"></div></div>
   <p class="cert-intro">A focused collection of professional training across manufacturing, quality, automation, supply chain, data analytics, AI, cloud fundamentals, and business leadership. Each item links to the certificate PDF.</p>
   <div class="cert-grid">
     <article class="cert-card">
