@@ -32,10 +32,11 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif}h1{margin:0;font-size:clamp
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.skill h3{color:var(--green);font-size:15px;border-bottom:1px solid var(--line);padding-bottom:13px}
 .edu-card{display:grid;grid-template-columns:1fr 170px;align-items:center;gap:30px;margin-bottom:20px}.edu-card h3{font-size:27px;margin:0 0 6px}.school{color:var(--green);font-weight:900}.gpa{text-align:right;font-family:"Courier New",monospace;font-weight:900}.gpa span{display:block;color:var(--muted);font-family:Arial;font-weight:400;margin-top:6px}
 .award-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.award{border-left:4px solid var(--gold)}
+.publication-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.publication-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;padding:28px;display:flex;flex-direction:column;gap:12px}.publication-card h3{font-size:24px;line-height:1.18;margin:0}.publication-card .journal{color:var(--green);font-weight:900}.publication-card a{margin-top:auto;font-weight:900;color:var(--green)}
 .cert-intro{max-width:860px;font-size:19px;color:#38443f;margin:-22px 0 34px}.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.cert-card{background:rgba(239,231,216,.76);border:1px solid var(--line);border-radius:7px;padding:28px}.cert-card h3{margin:0 0 18px;color:var(--green);font-size:24px}.cert-list{display:grid;gap:12px}.cert-link{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;border-top:1px dashed var(--line);padding-top:12px;font-weight:900}.cert-link:first-child{border-top:0;padding-top:0}.cert-link span{color:var(--muted);font-family:"Courier New",monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
 .contact-panel{background:linear-gradient(135deg,rgba(16,32,25,.98),rgba(25,40,31,.95));color:var(--white);border-radius:8px;padding:74px 40px;text-align:center}.contact-panel h2{font-size:clamp(42px,5vw,68px);margin:0}.contact-panel h2 em{color:var(--gold)}.contact-panel p{font-size:19px;color:#d8d2c6;max-width:760px;margin:24px auto 34px}.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}.contact-links a{min-width:170px;border:1px solid rgba(255,255,255,.35);padding:15px 17px;font-weight:900}
 footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier New",monospace}
-@media(max-width:950px){.hero,.about-grid,.project-grid,.gallery-grid,.press-grid,.skills-grid,.role,.award-grid,.cert-grid{grid-template-columns:1fr}.gallery-card.featured{grid-column:auto}.photo-card{margin:0}.nav-inner{height:auto;align-items:flex-start;flex-direction:column;padding:16px 0}.nav-links{gap:14px;font-size:13px;flex-wrap:wrap}.section-title{grid-template-columns:auto 1fr}.line{grid-column:1/-1}}
+@media(max-width:950px){.hero,.about-grid,.project-grid,.gallery-grid,.press-grid,.skills-grid,.role,.award-grid,.publication-grid,.cert-grid{grid-template-columns:1fr}.gallery-card.featured{grid-column:auto}.photo-card{margin:0}.nav-inner{height:auto;align-items:flex-start;flex-direction:column;padding:16px 0}.nav-links{gap:14px;font-size:13px;flex-wrap:wrap}.section-title{grid-template-columns:auto 1fr}.line{grid-column:1/-1}}
 @media(max-width:650px){.container{width:min(100% - 28px,1320px)}h1{font-size:50px}.hero p,.copy{font-size:18px}.hero-buttons{flex-direction:column}.row,.edu-card{grid-template-columns:1fr}.row span:last-child,.gpa{text-align:left}}
 </style>
 </head>
@@ -44,7 +45,7 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
   <div class="nav-inner">
     <a class="logo" href="#home">MMI<span>.</span></a>
     <div class="nav-links">
-      <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#gallery">GALLERY</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#awards">AWARDS</a><a href="#certifications">CERTIFICATIONS</a><a href="resume-md-majharul-islam.pdf" target="_blank">RESUME</a><a href="#contact">CONTACT</a>
+      <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#gallery">GALLERY</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#awards">AWARDS</a><a href="#publications">PUBLICATIONS</a><a href="#certifications">CERTIFICATIONS</a><a href="resume-md-majharul-islam.pdf" target="_blank">RESUME</a><a href="#contact">CONTACT</a>
     </div>
   </div>
 </nav>
@@ -147,8 +148,22 @@ footer{text-align:center;color:var(--muted);padding:34px;font-family:"Courier Ne
   </div>
 </div></section>
 
+<section id="publications" class="section"><div class="container">
+  <div class="section-title"><span class="num">08</span><h2>Publications</h2><div class="line"></div></div>
+  <div class="publication-grid">
+    <article class="publication-card"><div class="type">Dec 2, 2025</div><h3>Sphericity Error Evaluation Based on Conical Search Algorithm</h3><div class="journal">Measurement Science and Technology</div><a href="https://iopscience.iop.org/article/10.1088/1361-6501/ae26a3?utm_source=researchgate.net&utm_medium=article" target="_blank">View Publication</a></article>
+    <article class="publication-card"><div class="type">Jun 24, 2025</div><h3>Enhancement of Sulfide Based Absorber and Charge Transport Layer Solar Cell Performances Using Machine Learning and the SCAPS-1D Simulator</h3><div class="journal">Royal Society of Chemistry</div><a href="https://pubs.rsc.org/en/content/articlelanding/2025/cp/d5cp01664a/unauth" target="_blank">View Publication</a></article>
+    <article class="publication-card"><div class="type">Jun 10, 2025</div><h3>Enhancing Microgrid Forecasting Accuracy with a TCNN-TLS Framework: A Novel Approach to Mitigating Uncertainty in Renewable Energy and Load Predictions</h3><div class="journal">Results in Engineering</div><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tW21nAQAAAAJ&citation_for_view=tW21nAQAAAAJ:IjCSPb-OGe4C" target="_blank">View Publication</a></article>
+    <article class="publication-card"><div class="type">Dec 26, 2024</div><h3>Evaluation of Design and Device Parameters for Lead-Free Sr3PBr3/Sr3NCl3 Dual-Layer Perovskite Photovoltaic Device Technology</h3><div class="journal">Royal Society of Chemistry</div><a href="https://pubs.rsc.org/en/content/articlehtml/2024/ra/d4ra07912d" target="_blank">View Publication</a></article>
+    <article class="publication-card"><div class="type">Nov 10, 2024</div><h3>A Comprehensive Investigation Involving Numerous HTL and ETL Layers to Design and Simulate High-Efficiency Ca3AsI3-Based Perovskite Solar Cells</h3><div class="journal">Inorganic Chemistry Communications</div><a href="https://www.sciencedirect.com/science/article/abs/pii/S138770032401637X" target="_blank">View Publication</a></article>
+    <article class="publication-card"><div class="type">Dec 1, 2023</div><h3>AI-Powered Predictive Failure Analysis in Pressure Vessels Using Real-Time Sensor Fusion: Enhancing Industrial Safety and Infrastructure Reliability</h3><div class="journal">American Journal of Scholarly Research and Innovation</div><a href="https://researchinnovationjournal.com/index.php/AJSRI/article/view/31" target="_blank">View Publication</a></article>
+    <article class="publication-card"><div class="type">Dec 1, 2022</div><h3>AI-Based Smart Coating Degradation Detection for Offshore Structures</h3><div class="journal">American Journal of Advanced Technology and Engineering Solutions</div><a href="https://ajates-scholarly.com/index.php/ajates/article/view/19" target="_blank">View Publication</a></article>
+    <article class="publication-card"><div class="type">Jun 1, 2022</div><h3>Integration of Advanced NDT Techniques & Implementing QA/QC Programs in Enhancing Safety and Integrity in Oil & Gas Operations</h3><div class="journal">American Journal of Interdisciplinary Studies</div><a href="https://ajisresearch.com/index.php/ajis/article/view/5" target="_blank">View Publication</a></article>
+  </div>
+</div></section>
+
 <section id="certifications" class="section"><div class="container">
-  <div class="section-title"><span class="num">08</span><h2>Certifications</h2><div class="line"></div></div>
+  <div class="section-title"><span class="num">09</span><h2>Certifications</h2><div class="line"></div></div>
   <p class="cert-intro">A focused collection of professional training across manufacturing, quality, automation, supply chain, data analytics, AI, cloud fundamentals, and business leadership. Each item links to the certificate PDF.</p>
   <div class="cert-grid">
     <article class="cert-card">
